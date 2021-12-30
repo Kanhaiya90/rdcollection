@@ -1,0 +1,63 @@
+<mat-card>
+    
+    <h1 style="margin-top: 20px;">User Account Details</h1>
+    
+    <mat-card-content>
+    <div class="bootstrap-wrapper">
+        <div class="container">
+            <div class="container text-center">
+                <img src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="" class="profile-image mb-20">
+                <h1 class="text-center">{{clientData.clientname}}</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-10 offset-md-1" style="width: 100%; overflow-x: auto;">
+
+                    <table class="table text-center">
+                        <tr>
+                            <td>Username</td>
+                            <td>{{clientData.clientname}}</td>
+                        </tr>
+                        <tr>
+                            <td>Account Number</td>
+                            <td>{{clientData.accnumber}}</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Number</td>
+                            <td>{{clientData.mobileno}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>{{clientData.address}}</td>
+                        </tr>
+                        <tr>
+                            <td>Installment</td>
+                            <td>{{clientData.installmentamt}} rs.</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Due</td>
+                            <td>{{clientData.dueamt}} rs.</td>
+                        </tr>
+                        <tr>
+                            <td>Advance</td>
+                            <td>{{clientData.advamt}} rs.</td>
+                        </tr>
+                        <tr>
+                            <td>Total Deposite</td>
+                            <td>{{totalAmount}} rs.</td>
+                        </tr>
+                        
+                    </table>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</mat-card-content>
+<mat-card-actions class="text-center">
+  <button mat-raised-button (click)="openDialog(clientData.id)" color="primary">Deposite Amount</button>
+  <button mat-raised-button color="accent" (click)="printPage()">Report</button>
+</mat-card-actions>
+</mat-card>
+

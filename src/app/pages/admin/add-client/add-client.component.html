@@ -1,0 +1,46 @@
+<mat-card>
+    <h1>Add Client</h1>
+    <mat-card-content>
+
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    
+                    <form (ngSubmit)="formSubmit()">
+
+                        <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Name</mat-label>
+                            <input required [(ngModel)]="clientData.clientname" name="name" type="text" matInput placeholder="Enter here">
+                         </mat-form-field>
+
+                         <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Account Number</mat-label>
+                            <input required [(ngModel)]="clientData.accnumber" name="name" type="text" matInput placeholder="Enter here">
+                         </mat-form-field>
+
+                         <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Installment Amount</mat-label>
+                            <input required [(ngModel)]="clientData.installmentamt" name="installmentamt" type="number" matInput placeholder="Enter here">
+                         </mat-form-field>
+    
+                          <mat-form-field appearance="outline"  class="w100">
+                            <mat-label>Phone</mat-label>
+                            <input required [(ngModel)]="clientData.mobileno" name="phone" matInput placeholder="Phone" type="number">   
+                          </mat-form-field>
+
+                         <mat-form-field class="w100" appearance="outline">
+                            <mat-label>Address</mat-label>                            
+                            <textarea [(ngModel)]="clientData.address" name="address" matInput rows="7" placeholder="Enter address here.."></textarea>
+                         </mat-form-field>
+                        
+                         <div class="container text-center">
+                            <button mat-raised-button color="primary">Add</button>
+                         </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </mat-card-content>
+</mat-card>

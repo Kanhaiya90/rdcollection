@@ -1,0 +1,36 @@
+<div class="bootstrap-wrapper">
+    <div class="container mb-20">
+        <div class="row">
+            <div class="col-md-12 mb-20 text-center">
+                <mat-card>
+                    <img src="https://img.icons8.com/external-bearicons-detailed-outline-bearicons/64/000000/external-Welcome-miscellany-texts-and-badges-bearicons-detailed-outline-bearicons.png"/>
+                      <mat-card-title matTooltip="welcome" style="text-decoration: underline;">Welcome To RD Collection</mat-card-title>
+                </mat-card>
+            </div>
+            <div class="col-md-6 mb-20">
+                <mat-card>
+                    <mat-card-subtitle>Today Collection</mat-card-subtitle>
+                    <mat-card-title>{{damt}}</mat-card-title>
+                </mat-card>
+            </div>
+            <div class="col-md-6 mb-20">
+                <mat-card routerLink="/admin/duelist">
+                    <mat-card-subtitle>Due Amount</mat-card-subtitle>
+                    <mat-card-title>{{totalDueAmount}}</mat-card-title>
+                </mat-card>
+            </div>
+            <div class="col-md-6 mb-20">
+                <mat-card routerLink="/admin/client-list">
+                    <mat-card-subtitle>All Client</mat-card-subtitle>
+                    <mat-card-title>{{totalClient}}</mat-card-title>
+                </mat-card>
+            </div>
+            <div class="col-md-6 mb-20">
+                <mat-card>
+                    <mat-card-subtitle>Print Report</mat-card-subtitle>
+                    <mat-icon (click)="printPage()">add_circle_outline</mat-icon>
+                </mat-card>
+            </div>  
+        </div>        
+    </div>
+</div>

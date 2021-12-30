@@ -1,0 +1,47 @@
+<mat-card>
+    <h1>All Due Amount</h1>
+    <div class="bootstrap-wrapper">   
+    <div class="container">
+    <div class="row">
+        <div class="col-md-9 text-center">
+        <button mat-raised-button color="primary" routerLink="../"><mat-icon>home</mat-icon></button>
+       </div>
+       <div class="col-md-3">
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+            <span matPrefix> </span>
+            <input type="text" matInput placeholder="Search here..." name= "search" [(ngModel)]="filterTerm">
+            <button matSuffix mat-button><mat-icon >search</mat-icon></button>
+            </mat-form-field>             
+        </form>
+        </div>
+    </div>    
+    </div>
+    </div>
+      
+    <mat-nav-list>
+        
+        <mat-list-item  *ngFor="let c of dueAmtClientData | filter:filterTerm" >
+        
+            <!-- <mat-icon mat-list-icon (click)="openUserDetail(c._id)">account_circle</mat-icon> -->
+            <div mat-line (click)="openUserDetail(c.id)">Name : {{c.clientname}}  </div>
+            <div mat-line (click)="openUserDetail(c.id)" >Due Amount : {{c.dueamt}} rs. </div>
+            <div mat-line (click)="openUserDetail(c.id)" >Place : {{c.address}} </div>
+            <mat-divider></mat-divider>
+           
+        </mat-list-item>      
+       
+    </mat-nav-list>
+   
+    <!-- <mat-paginator [length]="clientData.length"
+    [pageSize]="size"
+    [pageIndex]="page"
+    [pageSizeOptions]="[10, 20, 50,100,500]"
+    (page)="getData($event)"
+    color="primary"
+    style="background-color: rgb(208, 205, 211);"
+    >
+    </mat-paginator> -->
+    
+ 
+</mat-card>

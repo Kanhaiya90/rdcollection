@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+      <button mat-icon-button *ngIf="loginTrue">
+          <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+      </button>
+      <h1>RD Collection</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+      <mat-nav-list>
+          <button mat-list-item routerLink="/admin">  <mat-icon>home</mat-icon> Home</button>
+          <button mat-list-item routerLink="/admin/client-list">  <mat-icon>account_circle</mat-icon>All Client</button>
+          <button mat-list-item routerLink="/admin/history-detail">  <mat-icon>category</mat-icon>History</button>
+          <button mat-list-item routerLink="/admin/duelist"> <mat-icon>quiz</mat-icon>Due Client List</button>
+          <button mat-list-item routerLink="/admin/add-client"> <mat-icon>add_circle_outline</mat-icon>Add Client</button>
+          <button mat-list-item (click)="logoutApp()"> <mat-icon>logout</mat-icon>Logout</button>
+      </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <div style="height: 88vh;">
+          <router-outlet></router-outlet>
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Deposite Amount</h2>
+<mat-dialog-content class="mat-typography">
+    <form (ngSubmit)="updateAmount()">
+
+        <mat-form-field class="w100" appearance="outline">
+            <mat-label>Amount</mat-label>
+            <input required [(ngModel)]="accountDetailData.depositamt" name="depositamt" type="number" matInput placeholder="Enter here">
+            
+        </mat-form-field>
+
+        <div class="container text-center">
+            <button mat-raised-button color="primary">Update</button>
+         </div>
+    </form>     
+
+  
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>
